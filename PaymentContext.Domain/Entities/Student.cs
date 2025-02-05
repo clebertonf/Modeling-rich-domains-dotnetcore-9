@@ -13,6 +13,8 @@ public class Student : Entity
         Email = email;
         Address = address;
         _subscriptions = new List<Subscription>();
+        
+        AddNotifications(name, document, email);
     }
 
     public Name Name { get; private set; } 

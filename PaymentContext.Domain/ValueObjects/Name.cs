@@ -6,6 +6,9 @@ public class Name : ValueObject
 {
     public Name(string firstName, string lastName)
     {
+        if(string.IsNullOrEmpty(firstName))
+            AddNotification("Name.FirstName", "FirstName cannot be empty");
+        
         FirstName = firstName;
         LastName = lastName;
     }
